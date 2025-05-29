@@ -56,7 +56,6 @@
 ## Wallpaper
 
 [Wallpaper](https://drive.google.com/drive/folders/1Eog40yvrTshjDLVIETVncBKcDsvPLMIX?usp=sharing)
-Here’s an improved version of your README **"Quick Installation"** section, with clearer language, formatting, and professionalism while keeping your unique style:
 
 ---
 
