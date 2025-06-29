@@ -58,6 +58,31 @@ cd_up() {
     zle reset-prompt
 }
 
+cdt() {
+    if [ -z "$1" ]; then
+        echo "Usage: cdl <project-directory>"
+        return 1
+    fi
+    
+    PROJECT_DIR="$1"
+    SESSION_NAME=$(basename "$PROJECT_DIR")
+    
+    
+    cd "$PROJECT_DIR" || return
+    
+    if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+        tmux attach-session -t "$SESSION_NAME"
+    else
+        tmux new-session -d -s "$SESSION_NAME" -n main -c "$PROJECT_DIR"
+        tmux new-window  -t "$SESSION_NAME":1 -n worker1 -c "$PROJECT_DIR"
+        tmux new-window  -t "$SESSION_NAME":2 -n worker2 -c "$PROJECT_DIR"
+        tmux new-window  -t "$SESSION_NAME":3 -n logs    -c "$PROJECT_DIR"
+        tmux select-window -t "$SESSION_NAME":1
+        tmux attach-session -t "$SESSION_NAME"
+    fi
+}
+
+
 zle -N cd_up
 bindkey '^H' cd_up
 
@@ -104,7 +129,7 @@ eval "$(starship init zsh)"
 
 alias vim='nvim'
 
-alias gh-create='gh repo create --private --source=. --remote=origin && git push -u --all && gh browse'
+alias gh-create='git init && gh repo create --private --source=. --remote=origin && git push -u --all && gh browse'
 
 add(){
     git add --patch
