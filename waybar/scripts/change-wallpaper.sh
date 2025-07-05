@@ -5,7 +5,7 @@ if [ $(pgrep -c hyprpaper) -ne 0 ]; then
     killall hyprpaper
 fi
 
-TARGET="$HOME/Pictures/Wallpaper"
+TARGET="$HOME/Pictures/Wallpaper/Catppuccin"
 WALLPAPER=$(find "$TARGET" -type f -regex '.*\.\(jpg\|jpeg\|png\|webp\)' | shuf -n 1)
 
 CONFIG_PATH="$HOME/.config/hypr/hyprpaper.conf"

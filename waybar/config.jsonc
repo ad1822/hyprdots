@@ -1,13 +1,13 @@
 {
   "layer": "top",
-  "margin-left": 3,
-  "margin-right": 3,
-  "margin-top": 2,
+  // "margin-left": 3,
+  // "margin-right": 3,
+  // "margin-top": 2,
   "margin-bottom": 0,
   "modules-left": ["hyprland/workspaces", "cpu", "memory", "network#speed"],
   "modules-center": ["clock"],
   "modules-right": [
-    "hyprland/window",
+    // "hyprland/window",
     "custom/gh",
     "temperature#gpu",
     "custom/transparency",
@@ -18,7 +18,7 @@
     "battery"
   ],
   "custom/gh": {
-    "exec": "~/.config/waybar/scripts/weekly_commits DARK",
+    "exec": "sleep 1 & ~/.config/waybar/scripts/weekly_commits DARK",
     "return-type": "json",
     "interval": 2400,
     "tooltip": true,
@@ -106,33 +106,15 @@
     "on-click": "kitty btop",
     "tooltip-format": "{used}/{total} GiB"
   },
-  // "hyprland/workspaces": {
-  //   "all-outputs": true,
-  //   "warp-on-scroll": true,
-  //   "enable-bar-scroll": true,
-  //   "disable-scroll-wraparound": false,
-  //   "format": " {icon} ",
-  //   "format-icons": {
-  //     "active": "●",
-  //     "default": "○"
-  //   },
-  //   "persistent-workspaces": {
-  //     "*": 3
-  //   },
-  //   "on-click": "activate",
-  //   "on-scroll-up": "hyprctl dispatch workspace e-1",
-  //   "on-scroll-down": "hyprctl dispatch workspace e+1"
-  // },
   "hyprland/workspaces": {
     "all-outputs": true,
-    "active-only": false,
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format": "{icon}",
+    "warp-on-scroll": true,
+    "enable-bar-scroll": true,
+    "disable-scroll-wraparound": false,
+    "format": " {icon} ",
     "format-icons": {
-      "active": "󰮯",
-      "default": "󰊠",
-      "special": "S"
+      "active": "●",
+      "default": "●"
     },
     "persistent-workspaces": {
       "*": 4
@@ -141,6 +123,24 @@
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1"
   },
+  // "hyprland/workspaces": {
+  //   "all-outputs": true,
+  //   "active-only": false,
+  //   "on-scroll-up": "hyprctl dispatch workspace e+1",
+  //   "on-scroll-down": "hyprctl dispatch workspace e-1",
+  //   "format": "{icon}",
+  //   "format-icons": {
+  //     "active": "󰮯",
+  //     "default": "󰊠",
+  //     "special": "S"
+  //   },
+  //   "persistent-workspaces": {
+  //     "*": 4
+  //   },
+  //   "on-click": "activate",
+  //   "on-scroll-up": "hyprctl dispatch workspace e-1",
+  //   "on-scroll-down": "hyprctl dispatch workspace e+1"
+  // },
   "custom/weather": {
     "format": "{}°C",
     "tooltip": false,
@@ -149,7 +149,7 @@
     "return-type": "json"
   },
   "clock": {
-    "format": "{:%H:%M | %a %d/%m}",
+    "format": "{:%H:%M / %h %d}",
     "tooltip": true,
     "tooltip-format": "<tt>{calendar}</tt>"
   },

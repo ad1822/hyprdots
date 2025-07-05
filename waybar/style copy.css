@@ -5,12 +5,12 @@
   min-height: 14px;
   font-size: 12px;
   border: none;
-  /* border-radius: 6px; */
+  border-radius: 6px;
   padding: 0;
   margin: 0;
   box-shadow: none;
-  /* text-shadow: #161b22; */
-  background-color: @mantle;
+  text-shadow: none;
+  background-color: transparent;
 }
 
 /* General Styling */
@@ -24,6 +24,7 @@ menu,
 #network,
 #battery,
 #custom-power {
+  background: @raisin-black;
   padding: 7px 8px;
   margin: 0;
   border-radius: 6px;
@@ -31,18 +32,19 @@ menu,
 
 /* Workspace */
 #workspaces {
+  background: @raisin-black;
   margin: 0;
-  margin-left: 2px;
+  margin-left: 3px;
   padding: 0;
-  /* font-weight: bold; */
-  /* font-style: italic; */
+  font-weight: bold;
+  font-style: normal;
   opacity: 1;
-  font-size: 100px;
+  font-size: 20px;
   border-radius: 6px;
 }
 
 #workspaces button {
-  /* padding: 0px 2px; */
+  padding: 0px 5px;
   margin: 3px;
   border-radius: 6px;
   border: none;
@@ -51,21 +53,20 @@ menu,
 }
 
 #workspaces button.active {
-  color: @mauve;
-  /* background: @mauve; */
-  /* background: #cba6f7; */
+  color: #1e1e2e;
+  background: #cba6f7;
   min-width: 20px;
   opacity: 1;
 }
 
 #workspaces button:hover {
-  color: @sky;
+  color: @cerise;
   background: #1e1e2e;
   opacity: 1;
   animation: none;
 }
 
-/* #workspaces button:not(.active) {
+#workspaces button:not(.active) {
   color: #74c7ec;
 }
 #workspaces button:nth-child(1):not(.active) {
@@ -76,37 +77,39 @@ menu,
 }
 #workspaces button:nth-child(3):not(.active) {
   color: #a6e3a1;
-} */
+}
 
 /* Cpu */
 #cpu {
-  color: @text;
+  color: @beige;
   padding: 0px 8px 0px 15px;
+  background: @raisin-black;
   margin-left: 2px;
   border-radius: 6px 0 0 6px;
 }
 
 /* Memory */
 #memory {
-  color: @text;
-  padding: 0px 12px 0px 8px;
-  /* margin-right: 1px; */
+  color: @beige;
+  padding: 0px 15px 0px 8px;
+  background: @raisin-black;
+  margin-right: 1px;
   border-radius: 0 6px 6px 0;
 }
 
 /* Network Speed */
 #network.speed {
-  color: @text;
-  /* background: @mauve; */
-  /* padding: 0px 2px; */
-  min-width: 8px;
+  background: @raisin-black;
+  padding: 0px 6px;
+  min-width: 10px;
+  color: @beige;
   border-radius: 6px;
 }
 
 /* Clock */
 #clock {
   padding: 0 15px;
-  color: @text;
+  color: @beige;
   border-radius: 6px;
 }
 
@@ -119,9 +122,11 @@ window#waybar {
 
 #window {
   color: @text;
+  background: @raisin-black;
   padding: 6px;
   margin: 0px 2px;
 }
+
 
 /* Github Heatmap */
 #custom-gh {
@@ -140,14 +145,16 @@ window#waybar {
 #temperature.gpu {
   padding: 0px 12px;
   margin-right: 2px;
-  color: @green;
+  color: @celadon;
+  background: @raisin-black;
   border-radius: 6px;
 }
 
 /* Transparency */
 #custom-transparency {
   font-size: 18px;
-  color: @teal;
+  background: @raisin-black;
+  color: #94e2d5;
   padding: 0px 10px;
   margin-right: 2px;
   border-radius: 6px;
@@ -161,7 +168,7 @@ window#waybar {
   font-family: 'Font Awesome 5 Free';
   padding: 0px 8px;
   margin-right: 1px;
-  color: @red;
+  color: #f38ba8;
   background: @raisin-black;
   /* border-radius: 0 6px 6px 0; */
   border-radius: 6px;
@@ -172,7 +179,7 @@ window#waybar {
 #backlight {
   padding: 0 8px;
   margin: 0 1px;
-  color: @text;
+  color: @beige;
   border-radius: 6px 6px;
 }
 
@@ -186,7 +193,7 @@ window#waybar {
 /* Wifi */
 #network {
   min-width: 30px;
-  padding: 0 5px 0 2px;
+  padding: 0 7px 0 2px;
   /* margin: 0 2px; */
   border-radius: 6px;
   /* border-radius: 0 6px 6px 0; */
@@ -195,36 +202,36 @@ window#waybar {
 /* Battery */
 #battery {
   color: @mint;
-  min-width: 10px;
-  padding-left: 2px;
-  /* margin-left: 1px; */
-  margin-right: 2px;
+  min-width: 30px;
+  padding-left: 5px;
+  margin-left: 1px;
+  margin-right: 3px;
   /* margin: 0 1px; */
-  padding-right: 4px;
+  padding-right: 5px;
   border-radius: 6px;
 }
 
 #battery.charging {
   color: #a6e3a1; /* Text */
-  /* background: @raisin-black; */
+  background: @raisin-black;
   border-radius: 6px;
 }
 
 #battery.good:not(.charging) {
   color: #74c7ec;
-  /* background: @raisin-black; */
+  background: @raisin-black;
   border-radius: 6px;
 }
 
 #battery.warning:not(.charging) {
   color: #74c7ec; /* Text */
-  /* background: @raisin-black; */
+  background: @raisin-black;
   border-radius: 6px;
 }
 
 #battery.low:not(.charging) {
   color: #f38ba8; /* Text */
-  /* background: @raisin-black; */
+  background: @raisin-black;
   border-radius: 6px;
 }
 
@@ -245,6 +252,7 @@ window#waybar {
     background: #f2cdcd; /* Text */
   }
 }
+
 
 /* Some Modules that I am not using right now */
 #custom-cava {
