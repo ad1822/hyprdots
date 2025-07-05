@@ -53,21 +53,22 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
 
-cd_up() {
-    cd ..
-    zle reset-prompt
-}
+# cd_up() {
+#     cd ..
+#     zle reset-prompt
+# }
 
-cdt() {
-    if [ -z "$1" ]; then
-        echo "Usage: cdl <project-directory>"
-        return 1
+# Open VSCode and Tmux with 4 pane with one command
+# Use : open <file-path/ empty/ .>
+open() {
+    if [ -z "$1" ] || [ "$1" = "." ]; then
+        PROJECT_DIR=$(pwd)
+    else
+        PROJECT_DIR="$1"
     fi
-    
-    PROJECT_DIR="$1"
     SESSION_NAME=$(basename "$PROJECT_DIR")
     
-    
+    code "$PROJECT_DIR"
     cd "$PROJECT_DIR" || return
     
     if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
@@ -77,23 +78,25 @@ cdt() {
         tmux new-window  -t "$SESSION_NAME":1 -n worker1 -c "$PROJECT_DIR"
         tmux new-window  -t "$SESSION_NAME":2 -n worker2 -c "$PROJECT_DIR"
         tmux new-window  -t "$SESSION_NAME":3 -n logs    -c "$PROJECT_DIR"
+        tmux new-window  -t "$SESSION_NAME":4 -n logs    -c "$PROJECT_DIR"
+        
         tmux select-window -t "$SESSION_NAME":1
         tmux attach-session -t "$SESSION_NAME"
     fi
 }
 
 
-zle -N cd_up
-bindkey '^H' cd_up
+# zle -N cd_up
+# bindkey '^H' cd_up
 
-cd_menu() {
-    local dir
-    dir=$(eza -1 --color=always --icons --group-directories-first | fzf --ansi --preview 'eza --tree --level=1 --icons --color=always {}')
-    [[ -n "$dir" ]] && cd "$dir" && zle reset-prompt
-}
+# cd_menu() {
+#     local dir
+#     dir=$(eza -1 --color=always --icons --group-directories-first | fzf --ansi --preview 'eza --tree --level=1 --icons --color=always {}')
+#     [[ -n "$dir" ]] && cd "$dir" && zle reset-prompt
+# }
 
-zle -N cd_menu
-bindkey '^L' cd_menu
+# zle -N cd_menu
+# bindkey '^L' cd_menu
 
 HISTSIZE=5001
 HISTFILE=~/.zsh_history
@@ -129,26 +132,42 @@ eval "$(starship init zsh)"
 
 alias vim='nvim'
 
-alias gh-create='git init && gh repo create --private --source=. --remote=origin && git push -u --all && gh browse'
+# Create a git repo from terminal
+gh-create(){
+    git init && gh repo create --private --source=. --remote=origin && git push -u --all && gh browse
+}
 
+# Git add Alias
 add(){
     git add --patch
 }
 
+# Git Commit
+# I have a custom script
 commit(){
     bash ~/work/main/dotsh/gh/commit
 }
 
+# Git push
 push(){
     git push
 }
 
+transCat(){
+    tint --image "$1" --theme catppuccin
+}
+
+# Create a file and directly make it executable like a script
 ms(){
     touch "$1" && chmod +x "$1"
 }
 
-alias kls='kubectl get all'
+# Make Github repo public or private
+gh-visibility() {
+    gh repo edit --accept-visibility-change-consequences --visibility "$1"
+}
 
+alias kls='kubectl get all'
 alias jump='nvim $(fzf -m --preview="bat --color=always {}")'
 alias ls='eza -l --icons --level=0 --tree --sort=Name'
 alias search='eval "~/.local/bin/search.sh"'
@@ -162,6 +181,8 @@ alias fbat="fzf --preview 'bat --style=numbers --color=always --line-range :500 
 alias seek='pacseek'
 alias y='yazi'
 alias ci='cdi'
+
+# Path
 alias ....='cd ../..'
 alias ..='cd ..'
 alias ~='cd ~'
@@ -224,6 +245,7 @@ extract() {
     fi
 }
 
+# Search a Process and Kill it
 killp() {
     ps aux | fzf | awk '{print $2}' | xargs kill -9
 }
@@ -233,15 +255,17 @@ j() {
     dir=$(eza -1 --color=always --icons --group-directories-first  | fzf --ansi) && cd "$(echo "$dir" | awk '{print $NF}')"
 }
 
-
+# Create a Folder and navigate into that
 take() {
     mkdir -p "$1" && cd "$1"
 }
 
+# Navigate and List files
 c() {
     cd "$1" && ls
 }
 
+# Open YT music in browser
 music() {
     xdg-open https://music.youtube.com/
 }
@@ -258,6 +282,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Todo Manager Alias
 alias todo='~/.todo/todo_tui.sh'
 alias todocli='~/.todo/todo_cli.sh'
+
+# githubfetch.py ad1822 --ascii=block --heatmap
 
 # nitch
 fastfetch
