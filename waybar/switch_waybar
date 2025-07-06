@@ -1,0 +1,28 @@
+#!/bin/bash
+
+OLD_STYLE=style_old.css
+NEW_STYLE=style_new.css
+STYLE=style.css
+
+OLD_CONFIG=config_old.jsonc
+NEW_CONFIG=config_new.jsonc
+CONFIG=config.jsonc
+
+EXISTING_STYLE=$(readlink "$STYLE")
+
+killall waybar
+
+[[ ! -e $OLD_STYLE || ! -e $NEW_STYLE || ! -e $OLD_CONFIG || ! -e $NEW_CONFIG ]] && {
+    echo "Missing style or config files."
+    exit 1
+}
+
+if [[ "$EXISTING_STYLE" == "$OLD_STYLE" ]]; then
+    ln -sf "$NEW_CONFIG" "$CONFIG"
+    ln -sf "$NEW_STYLE" "$STYLE"
+else
+    ln -sf "$OLD_CONFIG" "$CONFIG"
+    ln -sf "$OLD_STYLE" "$STYLE"
+fi
+
+nohup waybar > /dev/null 2>&1 &

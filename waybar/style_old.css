@@ -24,7 +24,7 @@ menu,
 #network,
 #battery,
 #custom-power {
-  background: @raisin-black;
+  background: @base;
   padding: 7px 8px;
   margin: 0;
   border-radius: 6px;
@@ -32,7 +32,7 @@ menu,
 
 /* Workspace */
 #workspaces {
-  background: @raisin-black;
+  background: @base;
   margin: 0;
   margin-left: 3px;
   padding: 0;
@@ -60,8 +60,8 @@ menu,
 }
 
 #workspaces button:hover {
-  color: @cerise;
-  background: #1e1e2e;
+  color: @text;
+  background: @mantle;
   opacity: 1;
   animation: none;
 }
@@ -81,35 +81,35 @@ menu,
 
 /* Cpu */
 #cpu {
-  color: @beige;
+  color: @text;
   padding: 0px 8px 0px 15px;
-  background: @raisin-black;
+  background: @base;
   margin-left: 2px;
   border-radius: 6px 0 0 6px;
 }
 
 /* Memory */
 #memory {
-  color: @beige;
+  color: @text;
   padding: 0px 15px 0px 8px;
-  background: @raisin-black;
+  background: @base;
   margin-right: 1px;
   border-radius: 0 6px 6px 0;
 }
 
 /* Network Speed */
 #network.speed {
-  background: @raisin-black;
+  background: @base;
   padding: 0px 6px;
   min-width: 10px;
-  color: @beige;
+  color: @text;
   border-radius: 6px;
 }
 
 /* Clock */
 #clock {
   padding: 0 15px;
-  color: @beige;
+  color: @text;
   border-radius: 6px;
 }
 
@@ -122,16 +122,15 @@ window#waybar {
 
 #window {
   color: @text;
-  background: @raisin-black;
+  background: @base;
   padding: 6px;
   margin: 0px 2px;
 }
 
-
 /* Github Heatmap */
 #custom-gh {
   color: #39d353;
-  background: @raisin-black;
+  background: @base;
   border-radius: 6px;
   margin-right: 2px;
   padding: 0px 8px;
@@ -145,15 +144,15 @@ window#waybar {
 #temperature.gpu {
   padding: 0px 12px;
   margin-right: 2px;
-  color: @celadon;
-  background: @raisin-black;
+  color: @green;
+  background: @base;
   border-radius: 6px;
 }
 
 /* Transparency */
 #custom-transparency {
   font-size: 18px;
-  background: @raisin-black;
+  background: @base;
   color: #94e2d5;
   padding: 0px 10px;
   margin-right: 2px;
@@ -169,7 +168,7 @@ window#waybar {
   padding: 0px 8px;
   margin-right: 1px;
   color: #f38ba8;
-  background: @raisin-black;
+  background: @base;
   /* border-radius: 0 6px 6px 0; */
   border-radius: 6px;
 }
@@ -213,31 +212,31 @@ window#waybar {
 
 #battery.charging {
   color: #a6e3a1; /* Text */
-  background: @raisin-black;
+  background: @base;
   border-radius: 6px;
 }
 
 #battery.good:not(.charging) {
   color: #74c7ec;
-  background: @raisin-black;
+  background: @base;
   border-radius: 6px;
 }
 
 #battery.warning:not(.charging) {
   color: #74c7ec; /* Text */
-  background: @raisin-black;
+  background: @base;
   border-radius: 6px;
 }
 
 #battery.low:not(.charging) {
   color: #f38ba8; /* Text */
-  background: @raisin-black;
+  background: @base;
   border-radius: 6px;
 }
 
 #battery.critical:not(.charging) {
   color: #f38ba8; /* Text */
-  background: @raisin-black;
+  background: @base;
   animation-name: blink;
   animation-duration: 0.75s;
   animation-timing-function: linear;
@@ -253,7 +252,6 @@ window#waybar {
   }
 }
 
-
 /* Some Modules that I am not using right now */
 #custom-cava {
   color: #cba6f7;
@@ -261,7 +259,7 @@ window#waybar {
   border-right: 0px;
   padding: 6px;
   font-family: 'bargraph';
-  background: @raisin-black;
+  background: @base;
   margin: 0px 2px;
 }
 
@@ -270,7 +268,7 @@ window#waybar {
   transition: none;
   padding: 0px 10px;
   margin-right: 2px;
-  background: @raisin-black;
+  background: @base;
   color: rgba(137, 220, 235, 1);
   border-radius: 0 6px 6px 0;
 }
