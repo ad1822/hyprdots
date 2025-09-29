@@ -1,6 +1,6 @@
 local colors = {
-	color0 = "#1e1e2e", -- Catppuccin Mocha: Base (darkest background)
-	color1 = "#313244", -- Catppuccin Mocha: Surface1 (slightly lighter background)
+	color0 = "#181825", -- Catppuccin Mocha: Base (darkest background)
+	color1 = "#1e1e2e", -- Catppuccin Mocha: Surface1 (slightly lighter background)
 	color2 = "#585b70", -- Catppuccin Mocha: Surface2 (another background shade)
 	color3 = "#cdd6f4", -- Catppuccin Mocha: Text (light foreground color)
 

@@ -7,7 +7,6 @@ return {
 		require("catppuccin").setup({
 			flavour = "mocha", -- latte, frappe, macchiato, mocha
 			background = { -- :h background
-				light = "latte",
 				dark = "mocha",
 			},
 			transparent_background = true, -- disables setting the background color.
@@ -44,7 +43,9 @@ return {
 			custom_highlights = function()
 				return {
 					-- Custom background (mantle) color
-					Normal = { bg = "#181825" },
+					Normal = { bg = "#11111b" },
+					NormalNC = { bg = "#11111b" },
+					NormalFloat = { bg = "#11111b" },
 				}
 			end,
 			default_integrations = true,

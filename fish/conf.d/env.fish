@@ -13,14 +13,14 @@ set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
 
 # Fzf
 
-set -Ux FZF_DEFAULT_OPTS "--height 80% --layout=reverse --border rounded --info=inline --color=bg+:#181825,fg+:#cdd6f4,prompt:#89b4fa,pointer:#f38ba8"
+set -Ux FZF_DEFAULT_OPTS "--height 80% --layout=reverse --border rounded --info=inline --color=bg+:#11111b:,fg+:#cdd6f4,prompt:#89b4fa,pointer:#f38ba8"
 
 set -Ux FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS --preview 'bat --style=numbers --color=always {} | head -200'"
 
 set -Ux FZF_TMUX 1
 
 set -Ux FZF_DEFAULT_OPTS "\
-  --color=bg+:#313244,bg:#181825,spinner:#F5E0DC,hl:#F38BA8 \
+  --color=bg+:#313244,bg:#11111b,spinner:#F5E0DC,hl:#F38BA8 \
   --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
   --color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
   --color=selected-bg:#45475A \

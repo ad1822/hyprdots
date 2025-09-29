@@ -901,6 +901,16 @@ return {
 		vim.keymap.set("n", "<C-d>", "5<C-d>", { noremap = true, silent = true })
 		vim.keymap.set("n", "<C-u>", "5<C-u>", { noremap = true, silent = true })
 
+		-- vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "#11111b" })
+
+		-- vim.o.background = "dark"
+
+		-- non-current windows (splits, sidebars)
+		-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "#11111b" })
+		--
+		-- -- floating UIs (pickers, popups, which-key, snacks)
+		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#11111b" })
+
 		-- normal mode
 		vim.keymap.set({ "n", "v" }, "<leader>rg", function()
 			require("regex-palette").display_patterns()

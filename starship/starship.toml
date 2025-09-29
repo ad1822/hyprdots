@@ -19,10 +19,10 @@ $battery\
 # $memory_usage\
 
 [character]
-success_symbol = '[ ~>](fg:#89b4fa)'
-error_symbol = '[ ~>](bold red)'
-vimcmd_symbol = '[ <~](bold green)'
-vimcmd_replace_symbol = '[<~](bold green)'
+success_symbol = '[ ~>>](fg:#89b4fa)'
+error_symbol = '[ ~>>](bold red)'
+vimcmd_symbol = '[ <<~](bold green)'
+vimcmd_replace_symbol = '[<<~](bold green)'
 vimcmd_visual_symbol = '[V](bold yellow)'
 
 
