@@ -7,14 +7,14 @@ SETUVAR --export FD_DEFAULT_OPTS:\x2d\x2dhidden\x20\x2d\x2dexclude\x20\x2egit\x2
 SETUVAR --export FISH_PROFILE_STARTUP:1
 SETUVAR --export FZF_DEFAULT_OPTS:\x20\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x23313244\x2cbg\x3a\x2311111b\x2cspinner\x3a\x23F5E0DC\x2chl\x3a\x23F38BA8\x20\x20\x20\x2d\x2dcolor\x3dfg\x3a\x23CDD6F4\x2cheader\x3a\x23F38BA8\x2cinfo\x3a\x23CBA6F7\x2cpointer\x3a\x23F5E0DC\x20\x20\x20\x2d\x2dcolor\x3dmarker\x3a\x23B4BEFE\x2cfg\x2b\x3a\x23CDD6F4\x2cprompt\x3a\x23CBA6F7\x2chl\x2b\x3a\x23F38BA8\x20\x20\x20\x2d\x2dcolor\x3dselected\x2dbg\x3a\x2345475A\x20\x20\x20\x2d\x2dcolor\x3dborder\x3a\x236C7086\x2clabel\x3a\x23CDD6F4
 SETUVAR --export FZF_TMUX:1
-SETUVAR --export --path PATH:/home/ad/\x2econfig/rofi/scripts\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/lib/rustup/bin
+SETUVAR --export --path PATH:/home/ad/\x2econfig/rofi/scripts\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2elocal/share/nvim/mason/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/lib/rustup/bin
 SETUVAR --export STARSHIP_CONFIG:/home/ad/\x2econfig/starship/starship\x2etoml
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/ad/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/ad/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/ad\x24
-SETUVAR __fish_initialized:3800
+SETUVAR __fish_initialized:4300
 SETUVAR _fisher_catppuccin_2F_fish_files:\x7e/\x2econfig/fish/themes/Catppuccin\x20Frappe\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Latte\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Macchiato\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Mocha\x2etheme
 SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
@@ -22,43 +22,4 @@ SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions
 SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_changed_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_diff_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e\x7e/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/nvm\x2efish\x1epatrickf1/fzf\x2efish\x1ecatppuccin/fish\x1ejethrokuan/z
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR fish_color_autosuggestion:6c7086
-SETUVAR fish_color_cancel:f38ba8
-SETUVAR fish_color_command:89b4fa
-SETUVAR fish_color_comment:7f849c
-SETUVAR fish_color_cwd:f9e2af
-SETUVAR fish_color_cwd_root:red
-SETUVAR fish_color_end:fab387
-SETUVAR fish_color_error:f38ba8
-SETUVAR fish_color_escape:eba0ac
-SETUVAR fish_color_gray:6c7086
-SETUVAR fish_color_history_current:\x2d\x2dbold
-SETUVAR fish_color_host:89b4fa
-SETUVAR fish_color_host_remote:a6e3a1
-SETUVAR fish_color_keyword:f38ba8
-SETUVAR fish_color_normal:cdd6f4
-SETUVAR fish_color_operator:f5c2e7
-SETUVAR fish_color_option:a6e3a1
-SETUVAR fish_color_param:f2cdcd
-SETUVAR fish_color_quote:a6e3a1
-SETUVAR fish_color_redirection:f5c2e7
-SETUVAR fish_color_search_match:\x2d\x2dbackground\x3d313244
-SETUVAR fish_color_selection:\x2d\x2dbackground\x3d313244
-SETUVAR fish_color_status:f38ba8
-SETUVAR fish_color_user:94e2d5
-SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_features:no\x2dkeyboard\x2dprotocols
-SETUVAR fish_key_bindings:fish_vi_key_bindings
-SETUVAR fish_pager_color_background:\x1d
-SETUVAR fish_pager_color_completion:cdd6f4
-SETUVAR fish_pager_color_description:6c7086
-SETUVAR fish_pager_color_prefix:f5c2e7
-SETUVAR fish_pager_color_progress:6c7086
-SETUVAR fish_pager_color_secondary_background:\x1d
-SETUVAR fish_pager_color_secondary_completion:\x1d
-SETUVAR fish_pager_color_secondary_description:\x1d
-SETUVAR fish_pager_color_secondary_prefix:\x1d
-SETUVAR fish_pager_color_selected_background:\x1d
-SETUVAR fish_pager_color_selected_completion:\x1d
-SETUVAR fish_pager_color_selected_description:\x1d
-SETUVAR fish_pager_color_selected_prefix:\x1d
