@@ -22,9 +22,12 @@ if [ $(pgrep -c hyprpaper) -ne 0 ] && [ -n "$SELECTED" ]; then
 fi
 
 CONFIG_PATH="$HOME/.config/hypr/hyprpaper.conf"
-echo "preload = $SELECTED" >"$CONFIG_PATH"
-echo "wallpaper = eDP-1, $SELECTED" >>"$CONFIG_PATH"
-echo "splash = off" >>"$CONFIG_PATH"
-echo "ipc = off" >>"$CONFIG_PATH"
+
+echo "splash = false" >"$CONFIG_PATH"
+echo "wallpaper {" >>"$CONFIG_PATH"
+echo "  monitor = eDP-1" >>"$CONFIG_PATH"
+echo "  path = $SELECTED" >>"$CONFIG_PATH"
+echo "  fit_mode = cover" >>"$CONFIG_PATH"
+echo "}" >>"$CONFIG_PATH"
 
 hyprpaper &

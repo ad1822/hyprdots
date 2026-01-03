@@ -11,20 +11,20 @@ WALLPAPER=$(cat "$TEMP_FILE")
 rm "$TEMP_FILE"
 
 if [[ -z "$WALLPAPER" || ! -f "$WALLPAPER" ]]; then
-    echo "No wallpaper selected. Exiting."
-    exit 0
+  echo "No wallpaper selected. Exiting."
+  exit 0
 fi
 
 mkdir -p "$(dirname "$CONFIG_PATH")"
-{
-    echo "preload = $WALLPAPER"
-    echo "wallpaper = eDP-1,$WALLPAPER"
-    echo "splash = off"
-    echo "ipc = off"
-} > "$CONFIG_PATH"
+echo "splash = false" >"$CONFIG_PATH"
+echo "wallpaper {" >>"$CONFIG_PATH"
+echo "  monitor = eDP-1" >>"$CONFIG_PATH"
+echo "  path = $WALLPAPER" >>"$CONFIG_PATH"
+echo "  fit_mode = cover" >>"$CONFIG_PATH"
+echo "}" >>"$CONFIG_PATH"
 
 pkill hyprpaper
 hyprctl dispatch exec "hyprpaper"
 
-notify-send -a "hyprpaper" "Wallpaper Changed"  -i "$WALLPAPER"
+notify-send -a "hyprpaper" "Wallpaper Changed" -i "$WALLPAPER"
 echo "Wallpaper set to: $WALLPAPER"
