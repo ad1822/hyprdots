@@ -75,7 +75,7 @@
     "interval": 1,
     "format": "{ifname}%%",
     "format-wifi": "<span color='#a6e3a1' >  </span>{bandwidthDownBytes} <span  color='#f38ba8'>  </span>{bandwidthUpBytes}",
-    "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-ethernet": "<span color='#a6e3a1' >  </span>{bandwidthDownBytes} <span  color='#f38ba8'>  </span>{bandwidthUpBytes}",
     "format-disconnected": "󰌙",
     "tooltip-format": "{ipaddr}",
     "format-linked": "󰈁 {ifname} (No IP)",
