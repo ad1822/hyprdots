@@ -1,0 +1,138 @@
+format = """
+$username\
+[@](fg:#94e2d5)$hostname\
+$directory\
+$git_branch\
+$git_status\
+$time\
+$character\
+"""
+
+right_format = """
+$cmd_duration (fg:bold yellow)\
+$golang\
+$nodejs\
+$python\
+$docker_context\
+$battery\
+"""
+# $memory_usage\
+
+[character]
+success_symbol = '[ ~>>](fg:#89b4fa)'
+error_symbol = '[ ~>>](bold red)'
+vimcmd_symbol = '[ <<~](bold green)'
+vimcmd_replace_symbol = '[<<~](bold green)'
+vimcmd_visual_symbol = '[V](bold yellow)'
+
+
+[cmd_duration]
+min_time = 500
+format = 'takes (bold yellow)[$duration](bold yellow)'
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ''
+style = 'bold dimmed green'
+
+[battery]
+disabled = false
+format = " [$symbol$percentage ]($style)"
+full_symbol = "󱊢 "
+discharging_symbol = "󱊢 "
+charging_symbol = "󰂄 "
+unknown_symbol = "󰁽 "
+empty_symbol = "󰂎 "
+
+[[battery.display]]
+threshold = 100
+style = "fg:#f9e2af"
+
+[username]
+show_always = true
+style_user = "fg:#a6e3a1"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "fg:#f5c2e7"
+format = "[$hostname]($style)"
+disabled = false
+aliases = { "arch" = "arch" }
+
+[directory]
+style = "fg:#94e2d5"
+format = " [$path]($style)"
+truncate_to_repo = false
+truncation_length = 2
+fish_style_pwd_dir_length = 1
+use_logical_path = true
+
+[git_branch]
+symbol = " 󰘬"
+style = "fg:#f9e2af"
+format = "[$symbol $branch]($style)"
+
+[git_status]
+style = "fg:#f9e2af"
+format = '([\($all_status$ahead_behind\)]($style))'
+
+[golang]
+symbol = " "
+style = "fg:#94e2d5"
+format = "[ $symbol($version)]($style)"
+
+[nodejs]
+symbol = ""
+style = "fg:#a6e3a1"
+format = "[ $symbol ($version)]($style)"
+
+[python]
+symbol = ""
+style = "fg:#89dceb"
+format = "[ $symbol ($version)]($style)"
+
+[docker_context]
+symbol = ""
+style = "fg:#89b4fa"
+format = "[ $symbol $context]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#585b70"
+format = " [$time]($style)"
+
+[os]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[c]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[gradle]
+disabled = true
+
+[haskell]
+disabled = true
+
+[java]
+disabled = true
+
+[julia]
+disabled = true
+
+[nim]
+disabled = true

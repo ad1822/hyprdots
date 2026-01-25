@@ -2,7 +2,7 @@ abbr -a gs 'git status'
 abbr -a gco 'git checkout'
 
 abbr -a kls 'kubectl get all'
-abbr -a ls 'eza -l --icons --level=1 --tree --git --color=always --sort=Name'
+# abbr -a ls 'eza -l --icons --level=1 --tree --git --color=always --sort=Name'
 abbr -a search 'eval "~/.local/bin/search.sh"'
 abbr -a cod 'code .'
 
