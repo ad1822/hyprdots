@@ -5,5 +5,5 @@ Comment=Whatsapp
 Exec=zen-browser web.whatsapp.com/
 Terminal=false
 Type=Application
-Icon=/home/ad/.local/share/applications/icons/whatsapp.png
+Icon=$HOME/.local/share/applications/icons/whatsapp.png
 StartupNotify=true

@@ -5,5 +5,5 @@ Comment=Youtube
 Exec=zen-browser https://www.youtube.com/
 Terminal=false
 Type=Application
-Icon=/home/ad/.local/share/applications/icons/youtube.png
+Icon=$HOME/.local/share/applications/icons/youtube.png
 StartupNotify=true

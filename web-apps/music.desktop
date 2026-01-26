@@ -5,5 +5,5 @@ Comment=Music
 Exec=zen-browser https://music.youtube.com/
 Terminal=false
 Type=Application
-Icon=/home/ad/.local/share/applications/icons/music.png
+Icon=$HOME/.local/share/applications/icons/music.png
 StartupNotify=true

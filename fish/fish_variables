@@ -7,13 +7,13 @@ SETUVAR --export FD_DEFAULT_OPTS:\x2d\x2dhidden\x20\x2d\x2dexclude\x20\x2egit\x2
 SETUVAR --export FISH_PROFILE_STARTUP:1
 SETUVAR --export FZF_DEFAULT_OPTS:\x20\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x23313244\x2cbg\x3a\x2311111b\x2cspinner\x3a\x23F5E0DC\x2chl\x3a\x23F38BA8\x20\x20\x20\x2d\x2dcolor\x3dfg\x3a\x23CDD6F4\x2cheader\x3a\x23F38BA8\x2cinfo\x3a\x23CBA6F7\x2cpointer\x3a\x23F5E0DC\x20\x20\x20\x2d\x2dcolor\x3dmarker\x3a\x23B4BEFE\x2cfg\x2b\x3a\x23CDD6F4\x2cprompt\x3a\x23CBA6F7\x2chl\x2b\x3a\x23F38BA8\x20\x20\x20\x2d\x2dcolor\x3dselected\x2dbg\x3a\x2345475A\x20\x20\x20\x2d\x2dcolor\x3dborder\x3a\x236C7086\x2clabel\x3a\x23CDD6F4
 SETUVAR --export FZF_TMUX:1
-SETUVAR --export --path PATH:/home/ad/\x2econfig/rofi/scripts\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/home/ad/\x2ecargo/bin/\x1e/home/ad/go/bin\x1e/home/ad/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/lib/rustup/bin
-SETUVAR --export STARSHIP_CONFIG:/home/ad/\x2econfig/starship/starship\x2etoml
+SETUVAR --export --path PATH:$HOME/\x2econfig/rofi/scripts\x1e$HOME/go/bin\x1e$HOME/\x2elocal/bin\x1e$HOME/\x2ecargo/bin/\x1e$HOME/go/bin\x1e$HOME/\x2elocal/bin\x1e$HOME/\x2ecargo/bin/\x1e$HOME/go/bin\x1e$HOME/\x2elocal/bin\x1e$HOME/\x2ecargo/bin/\x1e$HOME/go/bin\x1e$HOME/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/usr/lib/rustup/bin
+SETUVAR --export STARSHIP_CONFIG:$HOME/\x2econfig/starship/starship\x2etoml
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/home/ad/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/home/ad/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/home/ad\x24
+SETUVAR Z_DATA:$HOME/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:$HOME/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e$HOME\x24
 SETUVAR __fish_initialized:4300
 SETUVAR _fisher_catppuccin_2F_fish_files:\x7e/\x2econfig/fish/themes/Catppuccin\x20Frappe\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Latte\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Macchiato\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Mocha\x2etheme
 SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
