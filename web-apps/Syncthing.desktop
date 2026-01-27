@@ -5,5 +5,5 @@ Comment=Syncthing
 Exec=zen-browser http://127.0.0.1:8384/
 Terminal=false
 Type=Application
-Icon=/home/ad/.local/share/applications/icons/Syncthing.png
+Icon=$HOME/.local/share/applications/icons/Syncthing.png
 StartupNotify=true

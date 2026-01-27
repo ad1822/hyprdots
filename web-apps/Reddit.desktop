@@ -5,5 +5,5 @@ Comment=Reddit
 Exec=zen-browser https://www.reddit.com/
 Terminal=false
 Type=Application
-Icon=/home/ad/.local/share/applications/icons/Reddit.png
+Icon=$HOME/.local/share/applications/icons/Reddit.png
 StartupNotify=true

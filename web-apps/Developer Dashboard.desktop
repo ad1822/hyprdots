@@ -5,5 +5,5 @@ Comment=Developer Dashboard
 Exec=zen-browser http://localhost:3000/summary?interval=today
 Terminal=false
 Type=Application
-Icon=/home/ad/.local/share/applications/icons/Developer Dashboard.png
+Icon=$HOME/.local/share/applications/icons/Developer Dashboard.png
 StartupNotify=true
