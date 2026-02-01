@@ -1,0 +1,52 @@
+font-family = "IosevkaTerm Nerd Font Mono"
+font-size = 14
+font-feature = liga
+
+font-thicken = true
+
+window-padding-balance = true
+
+bold-is-bright = true
+
+copy-on-select = true
+
+window-vsync = true
+
+### Window
+window-padding-x = 20
+window-padding-y = 10
+
+window-padding-color = background
+
+foreground = #CDD6F4
+background = #11111B
+
+selection-foreground = #11111B
+selection-background = #F5E0DC
+
+cursor-text = #1E1E2E
+confirm-close-surface = false
+
+
+### ANSI palette
+palette = 0=#45475A
+palette = 1=#F38BA8
+palette = 2=#A6E3A1
+palette = 3=#F9E2AF
+palette = 4=#89B4FA
+palette = 5=#F5C2E7
+palette = 6=#94E2D5
+palette = 7=#BAC2DE
+
+palette = 8=#585B70
+palette = 9=#F38BA8
+palette = 10=#A6E3A1
+palette = 11=#F9E2AF
+palette = 12=#89B4FA
+palette = 13=#F5C2E7
+palette = 14=#94E2D5
+palette = 15=#A6ADC8
+
+
+keybind=ctrl+shift+c=copy_to_clipboard
+keybind=ctrl+shift+v=paste_from_clipboard
