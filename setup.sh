@@ -390,7 +390,7 @@ setup_fish() {
     echo -e "\e[32mFish shell already installed.\e[0m"
   fi
 
-  setup_wakafetch() }
+  setup_wakafetch() {
   read -p $'\e[34mDo you want to install wakafetch-sqlite (y/n): \e[0m' ans
   if [[ "$ans" != "y" ]]; then
     cecho RED "Skipped wakafetch-sqlite setup."
