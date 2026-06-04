@@ -27,6 +27,7 @@ hl.config({
 })
 
 hl.device({
-	name = "epic-mouse-v1",
-	sensitivity = -0.5,
+	name = "instant-usb-gaming-mouse-",
+	sensitivity = -1,
+	disable_while_typing = true,
 })

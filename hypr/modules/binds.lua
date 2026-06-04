@@ -21,11 +21,6 @@ hl.bind(mod .. " + minus", hl.dsp.layout("colresize -0.1"))
 hl.bind(mod .. " + comma", hl.dsp.layout("swapcol l"))
 hl.bind(mod .. " + period", hl.dsp.layout("swapcol r"))
 
--- bind = $mainMod, equal, layoutmsg, colresize +0.1
--- bind = $mainMod, minus, layoutmsg, colresize -0.1
--- bind = $mainMod, comma, layoutmsg, swapcol l
--- bind = $mainMod, period, layoutmsg, swapcol r
-
 -- ── Apps ─────────────────────────────────────────────────────────
 bind(mod, "T", vars.terminal)
 bind(mod, "E", vars.terminal .. " -e " .. vars.fileManager)
@@ -45,6 +40,7 @@ bind(mod, "I", "sh -c '~/.config/waybar/scripts/change-wallpaper.sh && hyprpaper
 
 -- ── Waybar ───────────────────────────────────────────────────────
 bind("ALT + SHIFT", "W", "pkill -9 waybar || waybar &")
+bind("ALT + SHIFT", "T", "~/config_bak/waybar/scripts/toggle-trans.sh")
 
 -- ── Task Manager ─────────────────────────────────────────────────
 bind(modcs, "Tab", vars.terminal .. " -e " .. vars.taskManager)
@@ -87,11 +83,26 @@ hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("sh -c 'brightnessctl set +2% && 
 
 -- ── Window Controls ──────────────────────────────────────────────
 bindDsp(mod, "W", hl.dsp.window.close())
-bindDsp(mod, "F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-bindDsp(mod, "G", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+
+bindDsp("SUPER", "F", function()
+	hl.dispatch(hl.dsp.layout("colresize +conf"))
+	hl.dispatch(hl.dsp.layout("focus r"))
+	hl.dispatch(hl.dsp.layout("focus l"))
+end)
+
+-- bindDsp(mod, "F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+bindDsp(mod, "G", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+
 bindDsp(mod, "V", hl.dsp.window.float({ action = "toggle" }))
 
 -- bindDsp("ALT", "Tab", hl.dsp.window.focus_cycle({ direction = "next" }))
+-- Bind SUPER + Tab to toggle the Hyprspace overview
+-- hl.bind({
+-- 	mod = "SUPER",
+-- 	key = "Tab",
+-- 	dispatcher = "overview:toggle",
+-- 	args = "",
+-- })
 -- bindDsp("ALT + SHIFT", "Tab", hl.dsp.focus_cycle({ direction = "prev" }))
 
 -- ── Vim Navigation ───────────────────────────────────────────────

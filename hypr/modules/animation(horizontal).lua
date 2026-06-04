@@ -1,3 +1,9 @@
+hl.config({
+	animations = {
+		enabled = true, -- Disables all animations globally
+	},
+})
+
 -- Main motion curve
 hl.curve("motion", {
 	type = "bezier",
@@ -20,8 +26,8 @@ hl.curve("fade", {
 hl.curve("glide", {
 	type = "bezier",
 	points = {
-		{ 0.22, 0.5 },
-		{ 0.36, 1.2 },
+		{ 0.25, 1 },
+		{ 0.5, 1 },
 	},
 	-- time, animation progress
 	-- (0,0)

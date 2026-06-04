@@ -13,13 +13,36 @@ local function windowRule(class, workspace, silent)
 	})
 end
 
+hl.window_rule({
+	match = {
+		class = "screensaver",
+	},
+	fullscreen = true,
+	workspace = "special:screensaver",
+})
+
 -- Workspace 1: Browsers
 windowRule("zen", "1", true)
-windowRule("google-chrome", "1")
+windowRule("google-chrome", "5")
 windowRule("firefox", "1")
 
 -- Workspace 2: Terminals
 windowRule("kitty", "2")
+-- hl.window_rule({
+-- 	match = {
+-- 		class = "zen",
+-- 	},
+-- 	monitor = "HDMI-A-1",
+-- 	workspace = 6,
+-- })
+
+-- hl.window_rule({
+-- 	match = {
+-- 		class = "kitty",
+-- 	},
+-- 	monitor = "HDMI-A-1",
+-- 	workspace = 5,
+-- })
 windowRule("com.mitchellh.ghostty", "2")
 
 -- Workspace 3: Productivity & Dev
