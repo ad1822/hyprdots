@@ -2,6 +2,7 @@
 
 TARGET_DIR="${WALLPAPER_DIR:-$HOME/Pictures/Wallpaper}"
 CONFIG_PATH="$HOME/.config/hypr/hyprpaper.conf"
+MON=$(hyprctl monitors -j | jq -r '.[0].name')
 
 TEMP_FILE=$(mktemp)
 
@@ -18,13 +19,13 @@ fi
 mkdir -p "$(dirname "$CONFIG_PATH")"
 echo "splash = false" >"$CONFIG_PATH"
 echo "wallpaper {" >>"$CONFIG_PATH"
-echo "  monitor = eDP-1" >>"$CONFIG_PATH"
+echo "  monitor = $MON" >>"$CONFIG_PATH"
 echo "  path = $WALLPAPER" >>"$CONFIG_PATH"
 echo "  fit_mode = cover" >>"$CONFIG_PATH"
 echo "}" >>"$CONFIG_PATH"
 
 pkill hyprpaper
-hyprctl dispatch exec "hyprpaper"
+nohup hyprpaper >/dev/null 2>&1 &
 
 notify-send -a "hyprpaper" "Wallpaper Changed" -i "$WALLPAPER"
 echo "Wallpaper set to: $WALLPAPER"

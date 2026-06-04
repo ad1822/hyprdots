@@ -12,7 +12,7 @@ UPTIME="$(uptime -p |
 # ── Options ─────────────────────────────────────────────────────────
 declare -A ACTIONS=(
   ["Shutdown"]="hyprshutdown -t 'Shutting Down...' --post-cmd 'shutdown -P 0'"
-  ["Reboot"]="hyprshutdown -t 'Rebooting...' --post-cmd 'reboot -P 0'"
+  ["Reboot"]="reboot"
   ["Logout"]="hyprshutdown -t 'Loging Out... ' --post-cmd 'logout -P 0'"
 )
 
