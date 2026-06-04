@@ -5,9 +5,11 @@ $directory\
 $git_branch\
 $git_status\
 $time\
+$aws\
 $character\
 """
-# $aws\
+
+
 
 right_format = """
 $cmd_duration (fg:bold yellow)\
@@ -18,6 +20,8 @@ $docker_context\
 $battery\
 """
 # $memory_usage\
+
+
 
 [aws]
 format = '[ $symbol( $profile)(\[$duration\])](bold blue) '
