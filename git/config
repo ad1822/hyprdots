@@ -1,6 +1,8 @@
 [user]
 	email = ayushdumasia00@gmail.com
 	name = Ayush
+	# signingkey = "/home/ad/.ssh/github.pub"
+  signingkey = FD04E87E0C168A6A
 
 [core]
   editor = vim
@@ -47,7 +49,7 @@
     singleKey = true
 
 [commit]
-    gpgSign = false
+    gpgsign = false # true, if you want to sign every commit
     template = ~/.config/git/template
 
 [push]
@@ -104,17 +106,22 @@
     s10 = slog -10
 	gl = log --graph --oneline --all
 
-# [gpg]
-# 	format = opengpg
+[gpg]
+	format = openpgp
 
 [gpg "ssh"]
-	  program = ssh-keygen
+	program = ssh-keygen
+	allowedSignersFile = "/home/ad/.ssh/allowed_signers"
+	
+
 [credential "https://github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
